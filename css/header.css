@@ -1,10 +1,29 @@
+@import "./colors.css";
+@import "./common.css";
+
 header {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 0rem;
 
   & h1 {
     flex-grow: 1;
+    text-align: center;
+    color: var(--color-primary);
+  }
+
+  & ul {
+    display: flex;
+    flex-grow: 1;
+    list-style: none;
+    justify-content: space-evenly;
+
+    & a {
+      font-size: 18px;
+      display: block;
+      transition: var(--transition);
+    }
   }
 }
