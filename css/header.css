@@ -24,6 +24,18 @@ header {
       font-size: 18px;
       display: block;
       transition: var(--transition);
+
+      &:hover {
+        color: var(--color-primary-dark);
+        text-decoration: underline;
+        text-underline-offset: 10px;
+      }
+
+      &.active {
+        color: var(--color-primary-dark);
+        text-decoration: underline;
+        text-underline-offset: 10px;
+      }
     }
   }
 }
