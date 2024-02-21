@@ -5,6 +5,7 @@
     "sidebar photos";
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 header {
@@ -12,7 +13,6 @@ header {
 }
 
 #sidebar {
-  background-color: coral;
   grid-area: sidebar;
 }
 

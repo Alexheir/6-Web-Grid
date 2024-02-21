@@ -1,0 +1,30 @@
+#sidebar {
+  & ul {
+    list-style: none;
+    padding: 2rem 0;
+    display: flex;
+    flex-flow: column wrap;
+    color: red;
+
+    & li {
+      padding: 1rem;
+      color: red;
+      position: relative;
+
+      &::before {
+        visibility: initial;
+        content: "";
+        position: absolute;
+        height: 80%;
+        width: 0.25rem;
+        left: 0;
+        top: 10%;
+        background-color: var(--color-primary);
+      }
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
