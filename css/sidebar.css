@@ -13,8 +13,8 @@
       position: relative;
 
       &:hover {
-        background-image: linear-gradient(to right, #ffffff , #f2f5ff );
-              }
+        background-image: linear-gradient(to right, #ffffff, #f2f5ff);
+      }
 
       & a {
         display: block;

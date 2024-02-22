@@ -1,27 +1,43 @@
 const photoContainer = document.getElementById("photo-container");
-console.log(photoContainer);
 
-function getPhotoElement(photo_id) {
-  var jpgExists = checkFileExists(`./img/photo_${photo_id}.jpg`);
-  var jpegExists = checkFileExists(`./img/photo_${photo_id}.jpeg`);
-
-  if (jpgExists) {
-    return `<a href="#" class="photo">
-      <img alt="Photo ${photo_id}" src="./img/photo_${photo_id}.jpg"></a>`;
-  } else if (jpegExists) {
-    return `<a href="#" class="photo">
-      <img alt="Photo ${photo_id}" src="./img/photo_${photo_id}.jpeg"></a>`;
-  } else {
-    return "No se encontró la imagen.";
+async function renderPhotoElement(photo_id) {
+  try {
+    const photoElementHTML = await getPhotoElement(photo_id);
+    photoContainer.innerHTML += photoElementHTML;
+  } catch (error) {
+    console.error("Error al renderizar la foto:", error);
   }
 }
 
-// Función para verificar si un archivo existe
-function checkFileExists(url) {
-  var http = new XMLHttpRequest();
-  http.open("HEAD", url, false);
-  http.send();
-  return http.status !== 404;
+async function getPhotoElement(photo_id) {
+  var jpgExists = await checkFileExists(`./img/photo_${photo_id}.jpg`);
+  var jpegExists = await checkFileExists(`./img/photo_${photo_id}.jpeg`);
+
+  if (jpgExists) {
+    return `<a href="#" class="photo">
+    <img alt="Photo ${photo_id}" src="./img/photo_${photo_id}.jpg"></a>`;
+  } else if (jpegExists) {
+    return `<a href="#" class="photo">
+    <img alt="Photo ${photo_id}" src="./img/photo_${photo_id}.jpeg"></a>`;
+  } else {
+    throw new Error("No se encontró la imagen.");
+  }
 }
 
-photoContainer.innerHTML = getPhotoElement(3);
+async function checkFileExists(url) {
+  try {
+    const response = await fetch(url, { method: "HEAD" });
+    return response.ok;
+  } catch (error) {
+    console.error("Error al verificar la existencia del archivo:", error);
+    return false;
+  }
+}
+
+function loadPhotos() {
+  for (let i = 0; i <= 10; i++) {
+    renderPhotoElement(i);
+  }
+}
+
+loadPhotos();
