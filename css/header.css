@@ -1,5 +1,5 @@
-@import "./colors.css";
 @import "./common.css";
+@import "./colors.css";
 
 header {
   display: flex;
@@ -20,24 +20,44 @@ header {
     list-style: none;
     justify-content: space-evenly;
 
+    & li {
+      text-align: center;
+      display: flex;
+      justify-content: end;
+    }
+
     & a {
       font-size: 18px;
       display: block;
-      transition: var(--transition);
+      position: relative;
 
-      &:hover {
+      &::after {
+        opacity: 0;
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 140%;
+        width: 140%;
+        border: solid var(--color-primary-dark) 2px;
+        transition: var(--transition);
+        border-radius: 20px;
+      }
+
+      &:hover::after {
+        opacity: 1;
         color: var(--color-primary-dark);
-        text-decoration: underline;
-        text-underline-offset: 10px;
       }
 
       &.active {
-        color: var(--color-primary-dark);
-        text-decoration: underline;
-        text-underline-offset: 10px;
+        color: var(--color-primary);
+      }
+
+      &.active::after {
+        opacity: 0.5;
+        color: var(--color-primary);
       }
     }
   }
 }
-
-

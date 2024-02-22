@@ -1,5 +1,7 @@
+@import "./common.css";
 #sidebar {
-  & ul {
+  & .side-buttons {
+    color: red;
     list-style: none;
     padding: 2rem 0;
     display: flex;
@@ -11,18 +13,23 @@
       position: relative;
 
       &::before {
-        visibility: initial;
+        opacity: 0;
         content: "";
         position: absolute;
         height: 80%;
         width: 0.25rem;
         left: 0;
         top: 10%;
-        background-color: red;
+        background-color: var(--color-primary-dark);
+        transition: var(--transition);
       }
 
-      &:hover {
-        color: red;
+      &:hover::before {
+        opacity: 1;
+      }
+
+      &:hover a {
+        color: var(--color-primary-dark);
       }
     }
   }
