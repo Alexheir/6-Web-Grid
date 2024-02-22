@@ -1,0 +1,37 @@
+@media screen and (max-width: 800px) {
+    
+  header {
+    & h1 {
+      text-align: left;
+    }
+
+    & nav {
+      gap: 10%;
+      justify-content: space-evenly;
+    }
+
+    & a {
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  header {
+    & h1 {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    & nav {
+      gap: 10%;
+      justify-content: center;
+    }
+
+    & a {
+      text-align: right;
+    }
+  }
+}

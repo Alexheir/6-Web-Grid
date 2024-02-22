@@ -1,6 +1,3 @@
-@import "./common.css";
-@import "./colors.css";
-
 header {
   display: flex;
   flex-flow: row wrap;
@@ -14,17 +11,20 @@ header {
     color: var(--color-primary);
   }
 
-  & ul {
+  & nav {
     display: flex;
     flex-grow: 1;
     list-style: none;
-    justify-content: space-evenly;
+    gap: 20%;
+    justify-content: center;
 
     & li {
       text-align: center;
       display: flex;
       justify-content: end;
     }
+
+  
 
     & a {
       font-size: 18px;

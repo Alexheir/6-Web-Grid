@@ -1,4 +1,5 @@
 @import "./common.css";
+
 #sidebar {
   & .side-buttons {
     color: red;
@@ -9,8 +10,16 @@
 
     & li {
       padding: 1rem;
-      color: red;
       position: relative;
+
+      &:hover {
+        background-image: linear-gradient(to right, #ffffff , #f2f5ff );
+              }
+
+      & a {
+        display: block;
+        width: 100%;
+      }
 
       &::before {
         opacity: 0;
