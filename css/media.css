@@ -32,6 +32,16 @@
     margin: 0 auto;
   }
 
+  #sidebar {
+    & .display {
+      display: initial;
+    }
+
+    & .hidden {
+      display: none;
+    }
+  }
+
   header {
     & h1 {
       text-align: center;
