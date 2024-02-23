@@ -1,3 +1,7 @@
+#photo-container {
+  display: flex;
+}
+
 .photo {
   & img {
     width: 100%;

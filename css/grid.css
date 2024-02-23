@@ -18,6 +18,5 @@ header {
 }
 
 #photo-container {
-  background-color: tomato;
   grid-area: photos;
 }
