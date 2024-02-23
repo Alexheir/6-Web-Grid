@@ -1,5 +1,3 @@
-@import "./common.css";
-
 #sidebar {
   & .side-buttons {
     color: red;
