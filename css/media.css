@@ -17,12 +17,21 @@
   #photo-container {
     & div.column {
       max-width: 33%;
-      background-color: red;
     }
   }
 }
 
 @media screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "photos";
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+
   header {
     & h1 {
       text-align: center;
