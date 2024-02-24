@@ -1,6 +1,5 @@
 #sidebar {
-  & .side-buttons {
-    color: red;
+  & #side-buttons {
     list-style: none;
     padding: 2rem 0;
     display: flex;
@@ -40,40 +39,89 @@
       }
     }
   }
-  
 }
 
 
-select{
+/*prueba*/
+#sidebar2 {
+  list-style: none;
+  padding: 2rem 0;
+  display: flex;
+  flex-flow: column wrap;
+
+  & li {
+    padding: 1rem;
+    position: relative;
+
+    &:hover {
+      background-image: linear-gradient(to right, #ffffff, #f2f5ff);
+    }
+
+    & a {
+      display: block;
+      width: 100%;
+    }
+
+    &::before {
+      opacity: 0;
+      content: "";
+      position: absolute;
+      height: 80%;
+      width: 0.25rem;
+      left: 0;
+      top: 10%;
+      background-color: var(--color-primary-dark);
+      transition: var(--transition);
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:hover a {
+      color: var(--color-primary-dark);
+    }
+  }
+}
+
+#opcion1 {
+  color: green;
+}
+
+
+#desplegable {
+  display: none;
+}
+
+select {
   display: flex;
   width: 100%;
   align-items: center;
   border: none;
-  outline: none; 
+  outline: none;
   -webkit-appearance: none;
-  -moz-appearance: none; 
+  -moz-appearance: none;
   appearance: none;
-  padding: 0; 
+  padding: 0;
   scrollbar-width: none;
   color: red;
 }
 
-.item-lista{
-display: block;
+.item-lista {
+  display: block;
   padding: 1rem;
-  &:hover{
-     background-image: linear-gradient(to right, #ffffff, #f2f5ff);
+  &:hover {
+    background-image: linear-gradient(to right, #ffffff, #f2f5ff);
   }
-  &:focus-visible{
+  &:focus-visible {
     outline: none;
   }
-
 }
 
- .item-lista:checked {
-        background-color: rgb(79, 79, 233);
-        color: red;
-    }
+.item-lista:checked {
+  background-color: rgb(79, 79, 233);
+  color: red;
+}
 .item-lista::active {
-        color: inherit;
-    }
+  color: inherit;
+}

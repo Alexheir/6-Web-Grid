@@ -20,7 +20,7 @@ document.getElementById("opcion1").addEventListener("click", function () {
   mostrarOpciones("desplegable");
 });
 
-var opciones = document.querySelectorAll("#desplegable > div");
+var opciones = document.querySelectorAll("#desplegable > li");
 opciones.forEach(function (opcion) {
   opcion.addEventListener("click", function () {
     var textoOpcion = this.innerText;
