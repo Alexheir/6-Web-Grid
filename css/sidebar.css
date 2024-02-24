@@ -40,4 +40,40 @@
       }
     }
   }
+  
 }
+
+
+select{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border: none;
+  outline: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+  appearance: none;
+  padding: 0; 
+  scrollbar-width: none;
+  color: red;
+}
+
+.item-lista{
+display: block;
+  padding: 1rem;
+  &:hover{
+     background-image: linear-gradient(to right, #ffffff, #f2f5ff);
+  }
+  &:focus-visible{
+    outline: none;
+  }
+
+}
+
+ .item-lista:checked {
+        background-color: rgb(79, 79, 233);
+        color: red;
+    }
+.item-lista::active {
+        color: inherit;
+    }
