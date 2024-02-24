@@ -88,40 +88,51 @@
     }
   }
 }
-
-#desplegable {
-  display: none;
-}
-
-select {
-  display: flex;
-  width: 100%;
-  align-items: center;
+/* Style the dropdown button */
+.drop-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
   border: none;
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  scrollbar-width: none;
-  color: red;
+  cursor: pointer;
 }
 
-.item-lista {
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
   display: block;
-  padding: 1rem;
-  &:hover {
-    background-image: linear-gradient(to right, #ffffff, #f2f5ff);
-  }
-  &:focus-visible {
-    outline: none;
-  }
 }
 
-.item-lista:checked {
-  background-color: rgb(79, 79, 233);
-  color: red;
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ffbf6c;
 }
-.item-lista::active {
-  color: inherit;
+
+/* Style for selected option */
+.selected {
+  background-color: hsl(43, 100%, 91%) !important;
+  color: #747474 !important;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #2980b9;
 }

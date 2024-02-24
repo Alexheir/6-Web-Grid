@@ -1,29 +1,49 @@
-function mostrarOpciones(id) {
-    var opciones = document.getElementById(id);
-    if (opciones.style.display === "none" || opciones.style.display === "") {
-      opciones.style.display = "block";
-    } else {
-      opciones.style.display = "none";
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  let dropdown = document.querySelector(".dropdown");
+  let listOptions = dropdown.querySelectorAll(".dropdown-content a");
+
+  //Función click en cada opción
+  function handleOptionClick(optionClicked) {
+    return function () {
+      //Obtener el texto de la opción a la que se hizo click
+      let selectedOptionText = optionClicked.innerText;
+
+      //Mostrar el texto dentro del espacio del botón
+      dropdown.querySelector(".drop-btn").innerText = selectedOptionText;
+
+      //Eliminar la class "Selected" de las opciones
+      listOptions.forEach(function (opt) {
+        opt.classList.remove("selected");
+      });
+
+      //Agrega "selected" a la opción clickeada a través del parámetro optionClicked de la función handleOptionClick
+      optionClicked.classList.add("selected");
+
+      //Contrae la lista
+      toggleListOptions();
+
+      //Remueve el enfoque
+      dropdown.querySelector(".drop-btn").blur();
+    };
   }
-  
-  // Función para seleccionar una opción y reemplazarla en el menú principal
-  function seleccionarOpcion(id, opcion) {
-    var menuPrincipal = document.getElementById(id);
-    var opciones = document.getElementById("desplegable");
-    menuPrincipal.innerText = opcion;
-    opciones.style.display = "none"; // Oculta las opciones después de seleccionar una
+
+  //Asignación de eventos click a la lista de opciones
+  listOptions.forEach(function (e) {
+    e.addEventListener("click", handleOptionClick(e));
+  });
+
+  //Opción dentro del botón por defecto, llamamos a la función, le pasamos el primer elemento de la lista y luego ejecutamos la función interna del handelOptionClick haciendo un llamado inmediatamaente después ()
+  handleOptionClick(listOptions[0])();
+
+  //Función para contraer automaticamente la lista
+
+  dropdown
+    .querySelector(".drop-btn")
+    .addEventListener("click", toggleListOptions);
+
+  function toggleListOptions() {
+    let dropdownContent = document.querySelector(".dropdown-content");
+    dropdownContent.style.display =
+      dropdownContent.style.display === "none" ? "block" : "none";
   }
-  
-  // Añadir manejadores de eventos
-  document.getElementById("opcion1").addEventListener("click", function () {
-    mostrarOpciones("desplegable");
-  });
-  
-  var opciones = document.querySelectorAll("#desplegable > li");
-  opciones.forEach(function (opcion) {
-    opcion.addEventListener("click", function () {
-      var textoOpcion = this.innerText;
-      seleccionarOpcion("opcion1", textoOpcion);
-    });
-  });
+});
