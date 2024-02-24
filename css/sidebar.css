@@ -41,13 +41,18 @@
   }
 }
 
-
 /*prueba*/
 #sidebar2 {
   list-style: none;
   padding: 2rem 0;
   display: flex;
   flex-flow: column wrap;
+
+  #opcion1 {
+    &::before {
+      opacity: 1;
+    }
+  }
 
   & li {
     padding: 1rem;
@@ -83,11 +88,6 @@
     }
   }
 }
-
-#opcion1 {
-  color: green;
-}
-
 
 #desplegable {
   display: none;
