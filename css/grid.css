@@ -16,6 +16,9 @@ header {
 #sidebar {
   grid-area: sidebar;
 }
+#sidebar2 {
+  grid-area: sidebar;
+}
 
 #photo-container {
   grid-area: photos;
