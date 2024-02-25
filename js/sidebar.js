@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let dropdown = document.querySelector(".dropdown");
-  let listOptions = dropdown.querySelectorAll(".dropdown-content a");
+  let dropdown = document.querySelector("#sidebar2");
+  let listOptions = dropdown.querySelectorAll(".dropdown-content li");
 
   //Función click en cada opción
   function handleOptionClick(optionClicked) {
