@@ -1,0 +1,78 @@
+[
+    {
+        "url": "./img/photo_1.jpg",
+        "tags": ["Others"]
+    },
+    {
+        "url": "./img/photo_2.jpeg",
+        "tags": ["Landscape", "Nature"]
+    },
+    {
+        "url": "./img/photo_3.jpeg",
+        "tags": ["Urban"]
+    },
+    {
+        "url": "./img/photo_4.jpeg",
+        "tags": ["Urban","Landscape"]
+    },
+    {
+        "url": "./img/photo_5.jpg",
+        "tags": ["Portraits"]
+    },
+    {
+        "url": "./img/photo_6.jpg",
+        "tags": ["Others"]
+    },
+    {
+        "url": "./img/photo_8.jpeg",
+        "tags": ["Portraits", "Nature"]
+    },
+    {
+        "url": "./img/photo_9.jpeg",
+        "tags": ["Nature"]
+    },
+    {
+        "url": "./img/photo_10.jpeg",
+        "tags": ["Portraits"]
+    },
+    {
+        "url": "./img/photo_11.jpeg",
+        "tags": ["Nature"]
+    },
+    {
+        "url": "./img/photo_12.jpeg",
+        "tags": ["Urban"]
+    },
+    {
+        "url": "./img/photo_13.jpg",
+        "tags": ["Portraits"]
+    },
+    {
+        "url": "./img/photo_14.jpg",
+        "tags": ["Urban"]
+    },
+    {
+        "url": "./img/photo_15.jpg",
+        "tags": ["Portraits"]
+    },
+    {
+        "url": "./img/photo_16.jpeg",
+        "tags": ["Portraits", "Nature"]
+    },
+    {
+        "url": "./img/photo_17.jpg",
+        "tags": ["Nature", "Landscape"]
+    },
+    {
+        "url": "./img/photo_19.jpeg",
+        "tags": ["Landscape", "Nature"]
+    },
+    {
+        "url": "./img/photo_20.jpg",
+        "tags": ["Others"]
+    },
+  {
+        "url": "./img/photo_21.jpg",
+        "tags": ["Nature"]
+    }
+]
