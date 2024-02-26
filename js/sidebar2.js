@@ -47,3 +47,20 @@ document.addEventListener("DOMContentLoaded", function () {
       dropdownContent.style.display === "none" ? "block" : "none";
   }
 });
+
+document
+  .querySelector(".dropdown-content")
+  .addEventListener("click", function () {
+    // Desactivar eventos de puntero (hover)
+    desactivarHoverTemporalmente(500); // 500 milisegundos = 0.5 segundos
+  });
+
+function desactivarHoverTemporalmente(tiempo) {
+  // Desactivar hover
+  document.body.style.pointerEvents = "none";
+
+  // Volver a habilitar después de un tiempo especificado
+  setTimeout(function () {
+    document.body.style.pointerEvents = "auto";
+  }, tiempo);
+}
