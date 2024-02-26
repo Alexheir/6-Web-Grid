@@ -113,7 +113,7 @@
   text-align: left;
   width: 100%;
   font-weight: 500;
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   position: relative;
   background-image: linear-gradient(to right, #ffffff, #f2f5ff);
   font-size: 16px;
