@@ -1,43 +1,164 @@
 #sidebar {
-  & .side-buttons {
-    color: red;
+  & #side-buttons {
     list-style: none;
     padding: 2rem 0;
     display: flex;
     flex-flow: column wrap;
+  }
+}
 
-    & li {
-      padding: 1rem;
-      position: relative;
+.btn {
+  height: 3rem;
+  position: relative;
+  display: flex;
 
-      &:hover {
-        background-image: linear-gradient(to right, #ffffff, #f2f5ff);
-      }
+  &:hover {
+    background-image: linear-gradient(to right, #ffffff, #f2f5ff);
+  }
 
-      & a {
-        display: block;
-        width: 100%;
-      }
+  & a {
+    width: 100%;
+    height: 100%;
+    margin-top: 0.75rem;
+    margin-left: 1rem;
+  }
 
-      &::before {
-        opacity: 0;
-        content: "";
-        position: absolute;
-        height: 80%;
-        width: 0.25rem;
-        left: 0;
-        top: 10%;
-        background-color: var(--color-primary-dark);
-        transition: var(--transition);
-      }
+  &::before {
+    opacity: 0;
+    content: "";
+    position: absolute;
+    height: 80%;
+    width: 0.25rem;
+    left: 0;
+    top: 10%;
+    background-color: var(--color-primary-dark);
+    transition: var(--transition);
+  }
 
-      &:hover::before {
-        opacity: 1;
-      }
+  &:hover::before {
+    opacity: 1;
+  }
 
-      &:hover a {
-        color: var(--color-primary-dark);
-      }
+  &:hover a {
+    color: var(--color-primary-dark);
+  }
+}
+
+.btn.active {
+  pointer-events: none;
+
+  & a {
+    font-weight: 500;
+  }
+
+  &::before {
+    opacity: 1;
+    content: "";
+    position: absolute;
+    height: 80%;
+    width: 0.25rem;
+    left: 0;
+    top: 10%;
+    background-color: var(--color-primary-dark);
+    transition: var(--transition);
+  }
+}
+
+/*prueba Aside2 -600px pantalla*/
+#sidebar2 {
+  display: none;
+  list-style: none;
+  padding: 2rem 0;
+  flex-flow: column wrap;
+  position: relative;
+
+  & li {
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+
+    &:hover {
+      background-image: linear-gradient(to right, #ffffff, #f2f5ff);
+    }
+
+    & a {
+      display: block;
+      width: 100%;
+    }
+
+    &::before {
+      opacity: 0;
+      content: "";
+      position: absolute;
+      height: 80%;
+      width: 0.25rem;
+      left: 0;
+      top: 10%;
+      background-color: var(--color-primary-dark);
+      transition: var(--transition);
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:hover a {
+      color: var(--color-primary-dark);
     }
   }
+}
+/* Style the dropdown button */
+.drop-btn {
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+  font-weight: 500;
+  color: var(--color-primary);
+  position: relative;
+  background-image: linear-gradient(to right, #ffffff, #f2f5ff);
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    opacity: 1;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0.25rem;
+    left: 0;
+    top: 0;
+    background-color: var(--color-primary-dark);
+    transition: var(--transition);
+  }
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  top: 75%;
+  width: 100%;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: all 5s ease;
+}
+
+/* Links inside the dropdown */
+.dropdown-content li {
+  text-decoration: none;
+  display: block;
+}
+
+/* Style for selected option */
+.selected {
+  background-color: #b3e2ff !important;
+  color: #747474 !important;
+  pointer-events: none;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }

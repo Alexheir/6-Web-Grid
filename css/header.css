@@ -29,6 +29,7 @@ header {
       font-size: 18px;
       display: block;
       position: relative;
+      user-select: none;
 
       &::after {
         opacity: 0;
@@ -38,9 +39,9 @@ header {
         left: 50%;
         transform: translateX(-50%);
         height: 140%;
-        width: 140%;
+        width: 8rem;
         border: solid var(--color-primary-dark) 2px;
-        transition: var(--transition);
+        transition: all 0.25s ease;
         border-radius: 20px;
       }
 
@@ -50,12 +51,17 @@ header {
       }
 
       &.active {
+        font-weight: 500;
         color: var(--color-primary);
       }
 
       &.active::after {
         opacity: 0.5;
         color: var(--color-primary);
+      }
+
+      &:active::after {
+        background-color: var(--color-primary);
       }
     }
   }
