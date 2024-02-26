@@ -22,4 +22,5 @@ header {
 
 #photo-container {
   grid-area: photos;
+  aspect-ratio: 1/3;
 }
