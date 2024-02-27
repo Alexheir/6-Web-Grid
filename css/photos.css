@@ -8,8 +8,10 @@
 
   & .photo {
     height: 100%;
+    background-color: var(--color-gray);
     display: block;
     overflow: hidden;
+    border-radius: 10px;
     transition: all 0.25s ease;
 
     &:hover {
@@ -21,7 +23,6 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
-      border-radius: 10px;
     }
   }
 }

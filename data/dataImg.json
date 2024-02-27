@@ -17,11 +17,15 @@
     },
     {
         "url": "./img/photo_5.jpg",
-        "tags": ["Portraits"]
+        "tags": ["Best","Portraits"]
     },
     {
         "url": "./img/photo_6.jpg",
-        "tags": ["Others"]
+        "tags": ["Best","Others"]
+    },
+    {
+        "url": "./img/photo_7.jpg",
+        "tags": ["Nature"]
     },
     {
         "url": "./img/photo_8.jpeg",
@@ -53,7 +57,7 @@
     },
     {
         "url": "./img/photo_15.jpg",
-        "tags": ["Portraits"]
+        "tags": ["Best","Portraits"]
     },
     {
         "url": "./img/photo_16.jpeg",

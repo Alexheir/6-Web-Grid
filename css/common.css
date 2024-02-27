@@ -19,3 +19,7 @@ a {
     color: var(--color-primary-dark);
   }
 }
+
+body {
+  overflow-y: scroll;
+}

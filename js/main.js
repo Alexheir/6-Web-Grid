@@ -1,4 +1,4 @@
-const photoContainer = document.getElementById("photo-container");
+/* const photoContainer = document.getElementById("photo-container");
 
 async function renderPhotoElement(photo_id) {
   try {
@@ -54,3 +54,4 @@ function display() {
     }
   });
 }
+ */
