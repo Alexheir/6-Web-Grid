@@ -7,8 +7,6 @@ function loadJSON(url) {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
-
       // Acciones a realizar con los datos JSON
       let photoContainer = document.querySelector("#photo-container");
 
@@ -56,3 +54,4 @@ function preloadImage(imageData, container) {
 }
 
 loadJSON("./data/dataImg.json");
+document.dispatchEvent(new Event("imgsLoaded"));
