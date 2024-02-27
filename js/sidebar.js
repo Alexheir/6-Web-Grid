@@ -10,7 +10,7 @@ async function postImageLoad() {
     asideBtns.forEach(function (btn) {
       btn.classList.remove("active");
     });
-    e.currentTarget.parentElement.classList.add("active");
+    e.currentTarget.classList.add("active");
 
     //Captura de tag desde el nombre del btn
     let textBtn = e.currentTarget.innerText.trim();
