@@ -33,8 +33,22 @@ function createImageElement(imageData, container) {
   div.classList.add("photo");
   div.dataset.tags = JSON.stringify(imageData.tags); // Convertir el array de tags a una cadena JSON
 
+  // Crear contenedor de enlaces una vez
+  let tagContainer = document.createElement("div");
+  tagContainer.classList.add("tagContainer");
+  div.appendChild(tagContainer);
+
+  // Luego, agregar todos los enlaces al contenedor
+  imageData.tags.forEach((tag) => {
+    let a = document.createElement("a");
+    a.setAttribute("href", "#");
+    a.textContent = tag;
+    tagContainer.appendChild(a);
+  });
+
   // Crear una imagen y establecer su atributo src
   let img = document.createElement("img");
+
   img.setAttribute("src", imageData.url);
 
   // Agregar la imagen al div
@@ -64,7 +78,6 @@ async function showImgTags(e) {
   });
 
   let imgDivs2 = document.querySelectorAll("#photo-container .photo");
-  console.log(imgDivs2);
 
   function showtag(e) {
     console.log(e.currentTarget.dataset.tags);

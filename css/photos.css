@@ -1,5 +1,6 @@
 #photo-container {
   display: grid;
+  position: relative;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
   flex-wrap: wrap;
@@ -14,15 +15,42 @@
     border-radius: 10px;
     transition: all 0.25s ease;
 
-    &:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)) brightness(110%);
-    }
-
     & img {
       height: 100%;
       width: 100%;
       object-fit: cover;
     }
+
+    &:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)) brightness(110%);
+    }
   }
+}
+
+.tagContainer {
+  margin: 0.5rem;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  gap: 0.5rem;
+
+  & a {
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: rgb(217, 217, 217);
+    background-color: rgba(44, 44, 44, 0.443);
+    opacity: 0;
+    transition: opacity 0.25s ease, background-color 0.25s ease;
+
+    &:hover {
+      background-color: rgba(94, 94, 94, 0.443);
+    }
+  }
+}
+
+.photo:hover a {
+  opacity: 1;
 }
