@@ -55,3 +55,25 @@ function preloadImage(imageData, container) {
 
 loadJSON("./data/dataImg.json");
 document.dispatchEvent(new Event("imgsLoaded"));
+
+//Función para mostrar tags al clickar en las imágenes
+
+async function showImgTags(e) {
+  await new Promise((resolve) => {
+    window.addEventListener("load", resolve);
+  });
+
+  let imgDivs2 = document.querySelectorAll("#photo-container .photo");
+  console.log(imgDivs2);
+
+  function showtag(e) {
+    console.log(e.currentTarget.dataset.tags);
+  }
+
+  imgDivs2.forEach(function (img) {
+    img.addEventListener("click", showtag);
+    /* img.dataset.tags */
+  });
+}
+
+showImgTags();

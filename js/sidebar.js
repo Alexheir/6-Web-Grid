@@ -45,14 +45,12 @@ async function showTagOnBtnClick(e) {
     // Verificar si la imagen está visible (tiene style.display = "block")
     let computedStyle = window.getComputedStyle(imgDiv);
     if (computedStyle.display === "block") {
-      // Obtener los tags de la imagen actual
       let tags = imgDiv.dataset.tags.split(",");
-      console.log("Tags de esta imagen:", tags); // Registro de depuración
       imgTags.push(...tags);
     }
   });
 
-  imgTags = [...new Set(imgTags)];
+  imgTags = [...new Set(imgTags)].join(", ").replace(/\[|\]|"/g, "");
   console.log("Las etiquetas presentes son: " + imgTags);
 }
 
